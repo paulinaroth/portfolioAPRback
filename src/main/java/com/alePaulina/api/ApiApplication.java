@@ -18,7 +18,7 @@ public class ApiApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("https://portfolio-ap-35745.web.app").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}

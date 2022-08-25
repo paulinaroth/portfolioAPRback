@@ -17,7 +17,7 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -25,7 +25,7 @@ public class ApiApplication {
                 registry.addMapping("/**").allowedOrigins("*");
             }
         };
-    }
+    }*/
     
     @Bean
     public CorsFilter corsFilter() {

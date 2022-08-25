@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 // @author Pauline
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://portfolio-ap-35745.web.app")
 @RestController
 public class PersonController {
     

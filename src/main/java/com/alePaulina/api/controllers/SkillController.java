@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Pauline
  */
-@CrossOrigin(origins = "https://portfolio-ap-35745.web.app")
+@CrossOrigin(origins = "*")
 @RestController
 public class SkillController {
     

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  *
  * @author Pauline
  */
-@CrossOrigin(origins = "https://portfolio-ap-35745.web.app")
+@CrossOrigin(origins = "*")
 @Controller
 public class ProvinceController {
     @Autowired

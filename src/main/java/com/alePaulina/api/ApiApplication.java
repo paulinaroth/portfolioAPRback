@@ -18,11 +18,11 @@ public class ApiApplication {
     }
 
     @Bean
-    public WebMvcConfigurer implements WebMvcConfigurer {
+    public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("*");
+                registry.addMapping("/**");
             }
         };
     }
@@ -31,7 +31,7 @@ public class ApiApplication {
     public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("https://portfolio-ap-35745.web.app"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("/**"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Request-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));

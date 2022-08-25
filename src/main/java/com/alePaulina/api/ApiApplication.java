@@ -17,15 +17,15 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class, args);
     }
 
-    /*@Bean
-    public WebMvcConfigurer corsConfigurer() {
+    @Bean
+    public WebMvcConfigurer implements WebMvcConfigurer {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**").allowedOrigins("*");
             }
         };
-    }*/
+    }
     
     @Bean
     public CorsFilter corsFilter() {
